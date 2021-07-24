@@ -1,7 +1,12 @@
-<p>
+<div class="mt-3" >
   <strong>Commenter:</strong>
   <%= comment.commenter %>
-</p>
+  <ul class="float-end mb-5" >
+    <a>&#10006; <%= link_to "Del ", [comment.article, comment],
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %></a>
+  </ul>
+</div>
 
 <div class="container" >
   <div class="row">
@@ -9,13 +14,6 @@
       <p>
         <strong>Comment:</strong>
         <%= comment.body %>
-      </p>
-    </div>
-    <div>
-      <p>
-        <%= link_to 'Destroy Comment', [comment.article, comment],
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } %>
       </p>
     </div>
   </div>
