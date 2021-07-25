@@ -15063,3 +15063,397 @@ Started GET "/js/scripts.js" for 127.0.0.1 at 2021-07-24 05:37:41 -0300
   
 ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
   
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-07-24 19:40:05 -0300
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (3.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:58
+  Rendered articles/index.html.erb within layouts/application (Duration: 150.8ms | Allocations: 11167)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 764.2ms | Allocations: 17725)
+Completed 200 OK in 1344ms (Views: 877.8ms | ActiveRecord: 6.5ms | Allocations: 24712)
+
+
+Started GET "/app/assets/stylesheets/styles.css" for 127.0.0.1 at 2021-07-24 19:40:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2021-07-24 19:40:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2021-07-24 19:40:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/articles/new" for 127.0.0.1 at 2021-07-24 20:30:41 -0300
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x000055da2831e3d8@/var/lib/gems/2.5.0/gems/actionpack-6.1.4/lib/action_controller/metal/http_authentication.rb:73> rendered or redirected
+Completed 401 Unauthorized in 27ms (Allocations: 258)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-07-24 20:30:55 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2040.3ms | Allocations: 8760)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2544.5ms | Allocations: 9249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2861.4ms | Allocations: 12626)
+Completed 200 OK in 3226ms (Views: 2864.4ms | Allocations: 13329)
+
+
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:30:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/app/assets/stylesheets/styles.css" for 127.0.0.1 at 2021-07-24 20:30:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/app/assets/stylesheets/styles.css"):
+  
+Started GET "/articles/app/assets/images/home-bg.jpg" for 127.0.0.1 at 2021-07-24 20:31:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/app/assets/images/home-bg.jpg"):
+  
+Started GET "/articles/new" for 127.0.0.1 at 2021-07-24 20:31:05 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 57.4ms | Allocations: 1012)
+  Rendered articles/new.html.erb within layouts/application (Duration: 67.0ms | Allocations: 1134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 114.5ms | Allocations: 4563)
+Completed 200 OK in 123ms (Views: 118.7ms | Allocations: 5056)
+
+
+Started GET "/articles/app/assets/stylesheets/styles.css" for 127.0.0.1 at 2021-07-24 20:31:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/app/assets/stylesheets/styles.css"):
+  
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:31:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/app/assets/images/home-bg.jpg" for 127.0.0.1 at 2021-07-24 20:31:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/app/assets/images/home-bg.jpg"):
+  
+Started POST "/articles" for 127.0.0.1 at 2021-07-24 20:31:32 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"astolfo", "body"=>"diuhauhcuiahdusaud\r\nsduahduhsau\r\nsdauhsuhdu\r\nsuahdusah", "status"=>"public"}, "commit"=>"Create Article"}
+Filter chain halted as #<Proc:0x000055da2831e3d8@/var/lib/gems/2.5.0/gems/actionpack-6.1.4/lib/action_controller/metal/http_authentication.rb:73> rendered or redirected
+Completed 401 Unauthorized in 17ms (Allocations: 286)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-07-24 20:31:32 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"astolfo", "body"=>"diuhauhcuiahdusaud\r\nsduahduhsau\r\nsdauhsuhdu\r\nsuahdusah", "status"=>"public"}, "commit"=>"Create Article"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mArticle Create (19.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?)[0m  [["title", "astolfo"], ["body", "diuhauhcuiahdusaud\r\nsduahduhsau\r\nsdauhsuhdu\r\nsuahdusah"], ["created_at", "2021-07-24 23:31:32.900245"], ["updated_at", "2021-07-24 23:31:32.900245"], ["status", "public"]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (176.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+Redirected to http://localhost:3000/articles/9
+Completed 302 Found in 430ms (ActiveRecord: 199.9ms | Allocations: 6301)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2021-07-24 20:31:33 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (13.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/show.html.erb:78
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 11)
+  Rendered comments/_form.html.erb (Duration: 262.4ms | Allocations: 6829)
+  Rendered articles/show.html.erb within layouts/application (Duration: 677.2ms | Allocations: 19507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 749.1ms | Allocations: 22838)
+Completed 200 OK in 834ms (Views: 742.7ms | ActiveRecord: 19.6ms | Allocations: 24655)
+
+
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:31:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/css/styles.css" for 127.0.0.1 at 2021-07-24 20:31:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/css/styles.css"):
+  
+Started GET "/articles/assets/img/post-bg.jpg" for 127.0.0.1 at 2021-07-24 20:31:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/assets/img/post-bg.jpg"):
+  
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:31:37 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started POST "/articles/9/comments" for 127.0.0.1 at 2021-07-24 20:32:16 -0300
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"commenter"=>"muito legal", "body"=>"", "status"=>"public"}, "commit"=>"Create Comment", "article_id"=>"9"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (13.5ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?, ?)[0m  [["commenter", "muito legal"], ["body", ""], ["article_id", 9], ["created_at", "2021-07-24 23:32:16.408333"], ["updated_at", "2021-07-24 23:32:16.408333"], ["status", "public"]]
+  ↳ app/controllers/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (245.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:7:in `create'
+Redirected to http://localhost:3000/articles/9
+Completed 302 Found in 475ms (ActiveRecord: 259.5ms | Allocations: 6302)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2021-07-24 20:32:16 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/show.html.erb:78
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 20.8ms | Allocations: 344)
+  Rendered comments/_form.html.erb (Duration: 38.8ms | Allocations: 1108)
+  Rendered articles/show.html.erb within layouts/application (Duration: 106.5ms | Allocations: 3192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 196.2ms | Allocations: 6621)
+Completed 200 OK in 215ms (Views: 197.7ms | ActiveRecord: 2.7ms | Allocations: 7625)
+
+
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:32:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/css/styles.css" for 127.0.0.1 at 2021-07-24 20:32:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/css/styles.css"):
+  
+Started GET "/articles/assets/img/post-bg.jpg" for 127.0.0.1 at 2021-07-24 20:32:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/assets/img/post-bg.jpg"):
+  
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:32:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/9/edit" for 127.0.0.1 at 2021-07-24 20:32:28 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 59.5ms | Allocations: 1070)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 80.0ms | Allocations: 1423)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 131.7ms | Allocations: 4854)
+Completed 200 OK in 150ms (Views: 133.5ms | ActiveRecord: 0.5ms | Allocations: 6015)
+
+
+Started GET "/articles/9/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:32:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/9/js/scripts.js"):
+  
+Started GET "/articles/9/css/styles.css" for 127.0.0.1 at 2021-07-24 20:32:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/9/css/styles.css"):
+  
+Started GET "/articles/9/assets/favicon.ico" for 127.0.0.1 at 2021-07-24 20:32:31 -0300
+Started GET "/articles/9/app/assets/images/home-bg.jpg" for 127.0.0.1 at 2021-07-24 20:32:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/9/assets/favicon.ico"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/articles/9/app/assets/images/home-bg.jpg"):
+  
+Started PATCH "/articles/9" for 127.0.0.1 at 2021-07-24 20:32:35 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"astolfo", "body"=>"diuhauhcuiahdusaud\r\nsduahduhsau\r\nsdauhsuhdu\r\nsuahdusah", "status"=>"public"}, "commit"=>"Update Article", "id"=>"9"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:32:in `update'
+Redirected to http://localhost:3000/articles/9
+Completed 302 Found in 68ms (ActiveRecord: 0.5ms | Allocations: 1237)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2021-07-24 20:32:35 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/show.html.erb:78
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 1.2ms | Allocations: 166)
+  Rendered comments/_form.html.erb (Duration: 62.5ms | Allocations: 1105)
+  Rendered articles/show.html.erb within layouts/application (Duration: 88.3ms | Allocations: 2401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 229.4ms | Allocations: 5829)
+Completed 200 OK in 273ms (Views: 232.7ms | ActiveRecord: 1.3ms | Allocations: 6835)
+
+
+Started GET "/articles/css/styles.css" for 127.0.0.1 at 2021-07-24 20:32:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/css/styles.css"):
+  
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:32:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/assets/img/post-bg.jpg" for 127.0.0.1 at 2021-07-24 20:32:37 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/assets/img/post-bg.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2021-07-24 20:32:55 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (28.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (12.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."created_at" DESC[0m
+  ↳ app/views/articles/index.html.erb:58
+  Rendered articles/index.html.erb within layouts/application (Duration: 128.2ms | Allocations: 1788)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 239.8ms | Allocations: 5216)
+Completed 200 OK in 303ms (Views: 210.5ms | ActiveRecord: 41.0ms | Allocations: 5716)
+
+
+Started GET "/app/assets/stylesheets/styles.css" for 127.0.0.1 at 2021-07-24 20:32:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:32:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:32:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/articles/6" for 127.0.0.1 at 2021-07-24 20:33:13 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:78
+  Rendered collection of comments/_comment.html.erb [6 times] (Duration: 5.6ms | Allocations: 625)
+  Rendered comments/_form.html.erb (Duration: 11.1ms | Allocations: 1104)
+  Rendered articles/show.html.erb within layouts/application (Duration: 34.1ms | Allocations: 2939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | Allocations: 6367)
+Completed 200 OK in 91ms (Views: 76.8ms | ActiveRecord: 1.3ms | Allocations: 7387)
+
+
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:33:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/css/styles.css" for 127.0.0.1 at 2021-07-24 20:33:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/css/styles.css"):
+  
+Started GET "/articles/assets/img/post-bg.jpg" for 127.0.0.1 at 2021-07-24 20:33:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/assets/img/post-bg.jpg"):
+  
+Started GET "/articles/6" for 127.0.0.1 at 2021-07-24 20:49:53 -0300
+  [1m[35m (40.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:78
+  Rendered collection of comments/_comment.html.erb [6 times] (Duration: 574.9ms | Allocations: 1309)
+  Rendered comments/_form.html.erb (Duration: 1329.4ms | Allocations: 3966)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2291.8ms | Allocations: 19115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3239.2ms | Allocations: 25641)
+Completed 200 OK in 3833ms (Views: 3316.9ms | ActiveRecord: 8.4ms | Allocations: 37347)
+
+
+Started GET "/articles/css/styles.css" for 127.0.0.1 at 2021-07-24 20:50:01 -0300
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:50:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/articles/css/styles.css"):
+  
+Started GET "/articles/css/styles.css" for 127.0.0.1 at 2021-07-24 20:50:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/css/styles.css"):
+  
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 20:50:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started DELETE "/articles/6/comments/10" for 127.0.0.1 at 2021-07-24 23:23:37 -0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article_id"=>"6", "id"=>"10"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/comments_controller.rb:12:in `destroy'
+  [1m[36mArticle Load (15.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:12:in `destroy'
+  [1m[36mComment Load (1.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 6], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:13:in `destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `destroy'
+  [1m[36mComment Destroy (4.6ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/comments_controller.rb:14:in `destroy'
+  [1m[36mTRANSACTION (164.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:14:in `destroy'
+Redirected to http://localhost:3000/articles/6
+Completed 302 Found in 385ms (ActiveRecord: 201.6ms | Allocations: 7199)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2021-07-24 23:23:39 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  ↳ app/views/articles/show.html.erb:78
+  Rendered collection of comments/_comment.html.erb [5 times] (Duration: 5.1ms | Allocations: 544)
+  Rendered comments/_form.html.erb (Duration: 29.2ms | Allocations: 1195)
+  Rendered articles/show.html.erb within layouts/application (Duration: 81.9ms | Allocations: 2975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 308.7ms | Allocations: 6450)
+Completed 200 OK in 329ms (Views: 310.4ms | ActiveRecord: 1.0ms | Allocations: 7505)
+
+
+Started GET "/articles/css/styles.css" for 127.0.0.1 at 2021-07-24 23:23:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/css/styles.css"):
+  
+Started GET "/articles/js/scripts.js" for 127.0.0.1 at 2021-07-24 23:23:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/js/scripts.js"):
+  
+Started GET "/articles/assets/favicon.ico" for 127.0.0.1 at 2021-07-24 23:23:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles/assets/favicon.ico"):
+  
